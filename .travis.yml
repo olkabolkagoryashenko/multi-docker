@@ -16,7 +16,7 @@ after_success:
   - docker build -t olkabolkagoryashenko/multi-server ./server
   - docker build -t olkabolkagoryashenko/multi-worker ./worker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push oborisenko/multi-client
-  - docker push oborisenko/multi-worker
-  - docker push oborisenko/multi-nginx
-  - docker push oborisenko/multi-server
+  - docker push olkabolkagoryashenko/multi-client
+  - docker push olkabolkagoryashenko/multi-worker
+  - docker push olkabolkagoryashenko/multi-nginx
+  - docker push olkabolkagoryashenko/multi-server
