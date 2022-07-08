@@ -11,12 +11,12 @@ script:
   - docker run -e CI=true olkabolkagoryashenko/react-test npm test
 
 after_success: 
-  - docker build -t olkabolkagoryashenko/multi-client ./client
-  - docker build -t olkabolkagoryashenko/multi-nginx ./nginx
-  - docker build -t olkabolkagoryashenko/multi-server ./server
-  - docker build -t olkabolkagoryashenko/multi-worker ./worker
+  - docker build -t oborisenko/multi-client ./client
+  - docker build -t oborisenko/multi-nginx ./nginx
+  - docker build -t oborisenko/multi-server ./server
+  - docker build -t oborisenko/multi-worker ./worker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push olkabolkagoryashenko/multi-client
-  - docker push olkabolkagoryashenko/multi-worker
-  - docker push olkabolkagoryashenko/multi-nginx
-  - docker push olkabolkagoryashenko/multi-server
+  - docker push oborisenko/multi-client
+  - docker push oborisenko/multi-worker
+  - docker push oborisenko/multi-nginx
+  - docker push oborisenko/multi-server
