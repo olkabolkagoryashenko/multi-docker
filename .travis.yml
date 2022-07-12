@@ -21,12 +21,12 @@ after_success:
   - docker push oborisenko/multi-nginx
   - docker push oborisenko/multi-server
 
-  deploy:
-    provider: elasticbeanstalk
-    region: 'us-east-1'
-    app: 'multi-docker'
-    env: 'Multidocker-env'
-    bucket_name: 'elasticbeanstalk-us-east-1-624360971490'
-    bucket_path: 'docker-multi'
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRET_KEY
+deploy:
+  provider: elasticbeanstalk
+  region: 'us-east-1'
+  app: 'multi-docker'
+  env: 'Multidocker-env'
+  bucket_name: 'elasticbeanstalk-us-east-1-624360971490'
+  bucket_path: 'docker-multi'
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
